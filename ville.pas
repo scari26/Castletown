@@ -5,16 +5,27 @@ unit ville;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  ExtCtrls, Buttons;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
-    bonjour: TButton;
-    Label1: TLabel;
-    procedure bonjourClick(Sender: TObject);
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    maisonposs: TLabel;
+    maison: TButton;
+    contruire: TCheckGroup;
+    fermer: TBitBtn;
+    bois: TLabel;
+    Image1: TImage;
+    varbois: TLabel;
+    nourr: TLabel;
+    varnourr: TLabel;
+    suivant: TButton;
   private
 
   public
@@ -30,10 +41,6 @@ implementation
 
 { TForm1 }
 
-procedure TForm1.bonjourClick(Sender: TObject);
-begin
-  label1.Visible:=false;
-end;
 
 end.
 
