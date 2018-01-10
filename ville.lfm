@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 620
+  Left = 879
   Height = 711
-  Top = 172
+  Top = 138
   Width = 1007
   Caption = 'Castle Town'
   ClientHeight = 711
@@ -15,6 +15,7 @@ object Form1: TForm1
     Width = 96
     Caption = 'suivant'
     TabOrder = 0
+    Visible = False
   end
   object bois: TLabel
     Left = 416
@@ -23,6 +24,7 @@ object Form1: TForm1
     Width = 22
     Caption = 'bois'
     ParentColor = False
+    Visible = False
   end
   object varbois: TLabel
     Left = 451
@@ -31,6 +33,7 @@ object Form1: TForm1
     Width = 38
     Caption = 'varbois'
     ParentColor = False
+    Visible = False
   end
   object nourr: TLabel
     Left = 576
@@ -39,6 +42,7 @@ object Form1: TForm1
     Width = 29
     Caption = 'nourr'
     ParentColor = False
+    Visible = False
   end
   object varnourr: TLabel
     Left = 614
@@ -47,8 +51,9 @@ object Form1: TForm1
     Width = 45
     Caption = 'varnourr'
     ParentColor = False
+    Visible = False
   end
-  object Image1: TImage
+  object Imchateau: TImage
     Left = 592
     Height = 410
     Top = 64
@@ -8533,6 +8538,7 @@ object Form1: TForm1
       000000000004000000000080BF9CF8FF020C00C88FF52D4D54A3450000000049
       454E44AE426082
     }
+    Visible = False
   end
   object fermer: TBitBtn
     Left = 896
@@ -8541,6 +8547,7 @@ object Form1: TForm1
     Width = 75
     Caption = 'fermer'
     TabOrder = 1
+    Visible = False
   end
   object contruire: TCheckGroup
     Left = 64
@@ -8564,6 +8571,7 @@ object Form1: TForm1
       'Camp de bûcheron'
     )
     TabOrder = 2
+    Visible = False
     Data = {
       020000000202
     }
@@ -8574,7 +8582,9 @@ object Form1: TForm1
     Top = 168
     Width = 75
     Caption = 'maison'
+    OnClick = maisonClick
     TabOrder = 3
+    Visible = False
   end
   object maisonposs: TLabel
     Left = 169
@@ -8583,8 +8593,9 @@ object Form1: TForm1
     Width = 63
     Caption = 'maisonposs'
     ParentColor = False
+    Visible = False
   end
-  object Image2: TImage
+  object ImFerme: TImage
     Left = 176
     Height = 338
     Top = -16
@@ -11639,8 +11650,9 @@ object Form1: TForm1
       000000000004000000000001000100000000FCFFC7FF156000054EAD6F0F5F88
       310000000049454E44AE426082
     }
+    Visible = False
   end
-  object Image3: TImage
+  object ImMaison: TImage
     Left = 136
     Height = 357
     Top = 176
@@ -14482,8 +14494,9 @@ object Form1: TForm1
       0100001000000001000010000000010000DEF1FE2BC0002AFCDD0D5F1E2C2D00
       00000049454E44AE426082
     }
+    Visible = False
   end
-  object Image4: TImage
+  object ImBucheron: TImage
     Left = 336
     Height = 348
     Top = 330
@@ -16945,5 +16958,15 @@ object Form1: TForm1
       0001000008000040000000020000100000800000000400002000000001000008
       0000E0A75E020C00D91F18C35C1D3D8F0000000049454E44AE426082
     }
+    Visible = False
+  end
+  object commencer: TButton
+    Left = 368
+    Height = 50
+    Top = 288
+    Width = 263
+    Caption = 'commencer'
+    OnClick = commencerClick
+    TabOrder = 4
   end
 end
