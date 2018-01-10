@@ -5,14 +5,22 @@ unit ville;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  ExtCtrls, Buttons;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
-    Label1: TLabel;
+    contruire: TCheckGroup;
+    fermer: TBitBtn;
+    bois: TLabel;
+    Image1: TImage;
+    varbois: TLabel;
+    nourr: TLabel;
+    varnourr: TLabel;
+    suivant: TButton;
   private
 
   public
@@ -25,6 +33,9 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TForm1 }
+
 
 end.
 
