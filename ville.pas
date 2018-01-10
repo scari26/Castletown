@@ -12,7 +12,9 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    bonjour: TButton;
     Label1: TLabel;
+    procedure bonjourClick(Sender: TObject);
   private
 
   public
@@ -25,6 +27,13 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.bonjourClick(Sender: TObject);
+begin
+  label1.Visible:=false;
+end;
 
 end.
 
