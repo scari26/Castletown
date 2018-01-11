@@ -19,7 +19,8 @@ type
     ImFerme: TImage;
     ImMaison: TImage;
     ImBucheron: TImage;
-    maisonposs: TLabel;
+    gold: TLabel;
+    valor: TLabel;
     maison: TButton;
     fermer: TBitBtn;
     bois: TLabel;
@@ -44,9 +45,9 @@ type
 
 var
   Form1: TForm1;
-  Bbucheron,Bferme,Bmaison:Boolean;
-  varbois,varnourr,tours:integer;
-
+  Bbucheron,Bferme,Bmaison:Boolean; //Boolean pour carés bleu
+  varbois,varnourr,varor:integer; //ressources
+  tours:integer; //autre
 
 implementation
 
@@ -56,12 +57,12 @@ implementation
 procedure TForm1.maisonClick(Sender: TObject);
 begin
   if cochem.Visible=false then
-  begin
+  begin   //affiche le caré bleu
     Bmaison:=true;
     cochem.Visible:=true;
   end
   else
-  begin
+  begin   //retire le caré bleu
     Bmaison:=false;
     cochem.Visible:=false;
   end;
@@ -87,6 +88,9 @@ begin
     bucheron.Visible:=false;
     cocheb.Visible:=false;
   end;
+  valbois.caption:=IntToStr(varbois);
+  valnourr.caption:=IntToStr(varnourr);
+  valor.caption:=IntToStr(varor);
 end;
 
 procedure TForm1.commencerClick(Sender: TObject);
@@ -96,15 +100,18 @@ begin
   valbois.Visible:=true;
   nourr.Visible:=true;
   valnourr.Visible:=true;
+  gold.visible:=true;
+  valor.visible:=true;
   Imchateau.Visible:=true;
   fermer.Visible:=true;
   maison.Visible:=true;
-  maisonposs.Visible:=true;
   commencer.Visible:=false;
   varbois:=0;
   varnourr:=0;
-  valbois.caption:=inttostr(varbois);
-  valnourr.Caption:=inttostr(varnourr);
+  varor:=0;
+  valbois.caption:=inttostr(varbois);      //
+  valnourr.Caption:=inttostr(varnourr);    //ecrire la variable des ressources dans leur emplacement
+  valor.caption:=IntToStr(varor);          //
   Bferme:=false;
   Bbucheron:=false;
   ferme.Visible:=true;
@@ -114,12 +121,12 @@ end;
 procedure TForm1.BucheronClick(Sender: TObject);
 begin
   if cocheb.Visible=false then
-  begin
+  begin  //affiche le caré bleu
     Bbucheron:=true;
     cocheb.Visible:=true;
   end
   else
-  begin
+  begin  //retire le caré bleu
     Bbucheron:=false;
     cocheb.Visible:=false;
   end;
@@ -128,12 +135,12 @@ end;
 procedure TForm1.FermeClick(Sender: TObject);
 begin
   if cochef.Visible=false then
-  begin
+  begin  //affiche le caré bleu
     Bferme:=true;
     cochef.Visible:=true;
   end
   else
-  begin
+  begin  //retire le caré bleu
     Bferme:=false;
     cochef.Visible:=false;
   end;
