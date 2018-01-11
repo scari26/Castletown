@@ -88,9 +88,36 @@ begin
     bucheron.Visible:=false;
     cocheb.Visible:=false;
   end;
-  valbois.caption:=IntToStr(varbois);
-  valnourr.caption:=IntToStr(varnourr);
-  valor.caption:=IntToStr(varor);
+  if Immaison.visible=true then
+  begin //entretien et production maison
+    varnourr:=varnourr-15;//entretien
+    varbois:=varbois-5;
+    varor:=varor+10//production
+  end;
+  if Imbucheron.visible=true then
+  begin //entretien et production bucheron
+    varor:=varor-5;//entretien
+    varbois:=varbois-5;
+    varbois:=varbois+20;//production
+  end;
+  if Imferme.visible=true then
+  begin //entretien et production ferme
+    varor:=varor-5;//entretien
+    varbois:=varbois-10;
+    varnourr:=varnourr+20;//production
+  end;
+  if Imchateau.visible=true then
+  begin //entretien et production chateau
+    varor:=varor-10;//entretien
+    varbois:=varbois-10;
+    varnourr:=varnourr-10;
+    varor:=varor+10;//production
+    varbois:=varbois+15;
+    varnourr:=varnourr+15;
+  end;
+  valbois.caption:=IntToStr(varbois);      //
+  valnourr.caption:=IntToStr(varnourr);    //ecrire la variable des ressources dans leur emplacement
+  valor.caption:=IntToStr(varor);          //
 end;
 
 procedure TForm1.commencerClick(Sender: TObject);
